@@ -1,0 +1,17 @@
+.strokeDashoffset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    height: 10.5rem;
+    width: 10.5rem;
+    align-self: center;
+}
+
+.strokeDashoffset:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+
+}

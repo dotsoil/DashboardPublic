@@ -1,0 +1,59 @@
+@import '../Colors.scss';
+
+.daysSelector
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    .day{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        input{
+            display: none;
+        }
+        label{
+            display: inline-block;
+            padding: 0.5rem;
+            border-radius: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        input + label{
+            text-decoration: line-through;
+            text-decoration-thickness: .2rem;
+            background-color: $disabled-color-light;
+            color: $secondary-color-light;
+
+        }
+        input:checked + label{
+            text-decoration: none;
+            background-color: $secondary-color-light;
+            color: $primary-color-light;
+        }
+    }
+
+}
+
+.dashboard.dark
+{
+    .daysSelector
+    {
+        .day
+        {
+            input + label
+            {
+                background-color: $disabled-color-dark;    
+                color: $secondary-color-dark;
+            }
+            input:checked + label
+            {
+                background-color: $secondary-color-dark;
+                color: $primary-color-dark;
+            }
+
+        }
+    }
+}

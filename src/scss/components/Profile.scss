@@ -1,0 +1,162 @@
+@import "../Colors.scss";
+
+/* profile scss form configuration  */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 5rem;
+  overflow-x: hidden;
+  
+
+  // gradient background only on 10rem height
+  .gradient {
+    position: relative;
+    height: 10rem;
+    width: 100%;
+    opacity: 0.8;
+
+    @media (max-width: 768px) {
+      height: 5rem;
+      padding: 0.5rem;
+    }
+
+    // hide the coreners of the gradient
+    border-radius: 1% /3%;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .camera-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      position: absolute;
+      top: 1;
+      left: 1;
+      z-index: 1;
+      transform: scale(1);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .camera-icon:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+
+      .card {
+        padding: 2rem;
+        .card-body {
+          // input fields without background
+          input {
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            font-size: 0.9rem;
+            transition: border-bottom 0.5s ease-in-out;
+            &:focus {
+              outline: none;
+            }
+            &:disabled {
+                color: gray;
+                background-color: transparent;
+                border: none;
+                cursor: not-allowed;
+            }
+            
+          }
+        }
+      }
+    }
+  }
+}
+
+.dashboard.dark {
+  .profile-container {
+    .profile-info
+    {
+        span{
+            color: $text-color-dark;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+    }
+    .gradient {
+      background: $primary-color-dark;
+      background: linear-gradient(
+        36deg,
+        $primary-color-dark 30%,
+        $sidebar-color-dark 85%,
+        $secondary-color-dark 100%
+      );
+    }
+    .row {
+      .col {
+        .card {
+          .card-body {
+            input {
+              color: $text-color-dark;
+
+              &:focus {
+                border-bottom: 1px solid $primary-color-dark;
+              }
+
+              &:disabled {
+                color: gray;
+                background-color: transparent;
+                border: none;
+                cursor: not-allowed;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dashboard.light {
+  .profile-container {
+    .gradient {
+      background: $primary-color-light;
+      background: linear-gradient(
+        36deg,
+        $primary-color-light 30%,
+        $sidebar-color-light 85%,
+        $secondary-color-light 100%
+      );
+    }
+    .row {
+      .col {
+        .card {
+          .card-body {
+            input {
+              color: $text-color-light;
+
+              &:focus {
+                border-bottom: 1px solid $primary-color-light;
+              }
+              &:disabled {
+                color: gray;
+                background-color: transparent;
+                border: none;
+                cursor: not-allowed;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

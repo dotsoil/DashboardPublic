@@ -1,0 +1,81 @@
+@import '../Colors.scss';
+
+.row {
+    .carousel-inner {
+        height: 100%;
+        width: "100%"; 
+        display: flex;
+        align-items: center;
+        padding: 0.5em 0.5em 0.5em;
+        border-radius: 2.5em;
+
+    }
+
+    @media screen and (max-width:1024px) {
+        .carousel-inner {
+            max-width: 25rem;
+
+        }
+    }
+    .carousel-indicators {
+        // position at the bottom of the carousel
+        bottom: 0;
+        z-index: 1;
+        button {
+            /* change the button to dots and the color */
+            background-color: red;
+            border-radius: 50%;
+            width: .8rem;
+            height: .8rem;
+            border: none;
+            margin: 0 0.5rem;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: green;
+            }
+        }
+    }
+}
+
+
+.dashboard.dark {
+    .row {
+        .carousel-inner {
+            background-color: $card-color-dark;
+        }
+
+        .carousel-indicators {
+            button {
+                /* change the button to dots and the color */
+                background-color: $secondary-color-dark;
+
+                &:hover {
+                    background-color: $primary-color-dark;
+                }
+            }
+        }
+    }
+
+}
+
+
+.dashboard.light {
+    .row {
+        .carousel-inner {
+            background-color: $card-color-light;
+        }
+
+        .carousel-indicators {
+            button {
+                /* change the button to dots and the color */
+                background-color: $secondary-color-light;
+
+                &:hover {
+                    background-color: $primary-color-light;
+                }
+            }
+        }
+    }
+
+}

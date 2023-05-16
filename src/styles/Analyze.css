@@ -1,0 +1,14 @@
+
+.col
+{
+    flex: 0;
+}
+@media (max-width: 880px) {
+    .ant-picker-dropdown {
+        width: 50%;
+    }
+
+    .ant-picker-dropdown {
+        width: 100%;
+    }
+}

@@ -1,0 +1,81 @@
+@import "../Colors.scss";
+
+.fertilizer-container {
+    .table.table-hover {
+        background-color: transparent !important;
+        color: inherit !important;
+        border: 1ch;
+    }
+
+    .edit-td {
+        display: none;
+    }
+
+    .edit {
+        display: none;
+    }
+
+
+    // when tr class is swiped change the display of the td child with class edit-td to block
+    tbody {
+
+        // when tr hover change the background color
+        .swiped {
+            .edit-td {
+                // add animation when the td is displayed
+                animation: scrollLeftButton 1s;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+            }
+        }
+
+        .edit-mode {
+            .edit-td {
+                display: none;
+                
+            }
+
+            .edit {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+            }
+        }
+
+    }
+}
+
+
+@keyframes scrollLeftButton {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.dashboard.dark {
+    .fertilizer-container {
+        tbody {
+            tr:hover {
+                background-color: $secondary-color-dark !important;
+            }
+        }
+    }
+}
+
+
+.dashboard.light {
+    .fertilizer-container {
+        tbody {
+            tr:hover {
+                background-color: $secondary-color-light !important;
+            }
+        }
+    }
+}

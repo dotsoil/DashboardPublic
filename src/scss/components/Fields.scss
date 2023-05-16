@@ -1,0 +1,93 @@
+/* 3 .card in row inside .field-container */
+.fields-container {
+  display: flex;
+  margin: 0 -10px;
+    flex-wrap: wrap;
+
+    .card {
+      padding: 0 10px;
+      margin-bottom: 20px;
+      flex: 1 0 25% !important;
+      align-items: center;
+      height: inherit;
+      width: inherit;
+      .card-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .card-footer {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        p
+        {
+            margin: 0;
+            flex: 3 0 50%;
+        }
+
+
+      }
+
+      img{
+        width: 10rem;
+        height: 10rem;
+      }
+
+      .add-card
+      {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .plus-button
+      {
+        // create Plus + sign with css vertical line and horizontal line
+        position: relative;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:before{
+          content: "";
+          position: absolute;
+          width: 4rem;
+          height: 4px;
+          background: #000;
+        }
+        &:after{
+          content: "";
+          position: absolute;
+          width: 4px;
+          height: 4rem;
+          background: #000;
+        }
+        // scale up the plus sign on hover and add a transition effect
+        &:hover{
+          transform: scale(1.1);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      }
+    }
+    .card:hover{
+        box-shadow: 0 0 10px 0 rgba(0,0,0,1);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .fields-container {
+        flex-direction: column;
+        margin-bottom: 5rem !important;
+        .card {
+        flex: 1;
+        }
+    }
+}

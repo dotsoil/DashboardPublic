@@ -1,0 +1,47 @@
+.tuner {
+	margin: 0 auto;
+	// padding: 20px;
+	background-color: transparent;
+	border-radius: 10px;
+	.bar-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.bar {
+			width: .7rem;
+			height: 4rem;
+			display: inline-block;
+			vertical-align: middle;
+			  border-radius: 10px;
+			background-color: grey;
+			transition: all 0.4s ease-in-out;
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+		
+		.mid{
+			height: 6rem;
+			background-color: grey;
+		}
+		
+		.green {
+			height: 8rem;
+			background-color: lightgreen; 
+		}
+		
+		.yellow {
+			background-color: rgb(216, 216, 148);
+			height: 8rem;
+		}
+		
+		.red {
+			background-color: lightcoral;
+			height: 8rem;
+		}
+	}
+	
+}
+
+
+

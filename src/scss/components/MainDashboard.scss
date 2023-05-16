@@ -1,0 +1,39 @@
+.row {
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+
+
+    .card {
+        flex: 3;
+    }
+
+}
+
+    .rowContainer.container
+    {
+        // max-width: 100%;
+        width: inherit;
+        padding-bottom: 6rem;
+        display: flex;
+        flex-direction: column;
+
+        .nitrate-state
+        {
+            display: flex;
+            flex-direction: row;
+            padding: 0 !important;
+            .nitrate-stat-card
+            {
+                flex: 1;
+            }
+        }
+        @media (max-width: 1068px)
+        {
+            .nitrate-state
+            {
+                flex-direction: column;
+            }
+        }
+
+    }

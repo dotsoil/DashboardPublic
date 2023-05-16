@@ -1,0 +1,438 @@
+@import "../Colors.scss";
+
+.loginContainer {
+    display: flex;
+    flex-direction: row;
+    height: 95vh;
+    width: 95vw;
+    margin: 0 ;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    // glass effect
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: black;
+    // show icon at the top of the page small size
+    .signInButton {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;      
+        }
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 1rem;
+        width: 8rem;
+        height: 4rem;
+        // color the svg icon
+        path {
+            fill: $login-button-color;
+        }
+    }
+    .show-password{
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .input-group-text{
+        display: none;
+        border: none;
+    }
+    .forget-password
+    {
+        // create as a button with hover effect
+        cursor: pointer;
+        width: 40%;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            transform: scale(1.09);
+        }
+        // click effect
+        &:active {
+            transform: scale(1);
+        }
+
+    }
+    .signup-container
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        flex-wrap: nowrap;
+        // class register-phone and register-mail will be in the same line
+        
+        .mail-register, .register-phone
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            input{
+                background-color: $login-background-color;
+                border: none;
+                border-bottom: 2px solid ;
+                color: $login-button-color;
+                border-radius: 0 !important;
+                margin: 1rem;
+            }
+        }
+    }
+    input
+    {
+        background-color: $login-background-color;
+        border: none;   
+    }
+    // when user click on input field the background color will change to white and border will be none
+    input:focus
+    {
+        background-color: $login-background-color;
+        border: none;
+        outline: none;
+    }
+
+    .form-container{
+        background-color: $login-background-color;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 5rem;
+        .form-control{
+            // only line under input field
+            border: none;
+            border-bottom: 2px solid ;
+            color: $login-button-color;
+            border-radius: 0 !important;
+        }
+    
+        .formBasicEmail{
+            margin-bottom: 1rem;
+            background-color: $login-background-color;
+        }
+
+        .loginHeading{
+            font-weight: 600;
+            font-size: 2rem;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .loginSubHeading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            color: $login-button-color;
+        }
+    }
+
+    .form-signUp
+    {
+        display: flex;
+        background-color: $login-background-color;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+
+
+        input{
+            background-color: $login-background-color;
+            border: none;
+            border-bottom: 2px solid ;
+            color: $login-button-color;
+            border-radius: 0 !important;
+            margin: 1rem;
+        }
+    }
+    // create a line with text at the middle of hr tag space between text and line
+    .line{
+        position: relative;
+        margin: 1rem 1rem 5rem 1rem;
+        // line at the middle of hr tag
+    }
+    .intro-background {
+        // background-image: url("https://dotsoil.com/wp-content/uploads/2022/03/farmers2.jpg");
+        background-image: url("https://cdn.discordapp.com/attachments/989268383751106560/1085548172098678814/q_ia_Introduce_Sprout_the_tiny_seed_who_dreams_of_adventure._63bb1d6a-82fa-4970-b7f2-3cb8de1a7898.png");
+        background-blend-mode: multiply;
+        background-position: center;
+        // dark the background image
+        background-color: rgba(0, 0, 0, 0.5);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: inherit;
+        width: inherit;
+        .intro-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            color: white;
+            .intro-heading{
+                font-size: 3rem;
+                font-weight: 600;
+                margin: 0;
+                display: flex;
+            }
+            .intro-subheading{
+                font-size: 1rem;
+                margin-top: 10rem;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                .star-icons
+                {
+                    margin-top: 5rem;
+                    // display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    align-items: center;    
+                    svg{
+                        width: 2rem;
+                            height: 2rem;
+                        margin: 1rem;
+                        fill: $login-button-color;
+
+                    }
+                }
+            }
+
+        }
+        .close-btn
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 1rem;
+            z-index: 1;
+            color: $login-background-color;
+            border-color: $login-background-color;
+            font-weight: 700;
+        }
+    }
+    .social-icons
+    {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        // space between icons 
+        width: 50%;
+        margin: 1rem 0;
+        svg{
+            width: 2rem;
+            height: 2rem;
+            fill: $login-button-color;
+            &:hover{
+                fill: $login-button-hover-color;
+            }
+        }
+    }
+
+    button {
+        // color: white;
+        border-radius: 10;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border-color: $login-button-color;
+        color: $login-button-color;
+        &:hover {
+            background-color: $login-button-hover-color;
+            color: white;
+            transform: scale(1.1);
+        }
+    }
+    .signUpLink{
+        // show as button with hover effect
+        cursor: pointer;
+        width: 40%;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            transform: scale(1.09);
+        }
+    }
+
+
+    // email-input id field when user left input if not valid shake the input field
+    #email-input:invalid {
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        background-color: $login-background-color-error-input;
+    }
+    #email-input:valid {
+        background-color: $login-background-color-success-input;
+    }
+
+
+
+    // shake effect
+    @keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    50% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    75% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    100% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    }
+}
+
+    // mobile phones 
+    @media only screen and (max-width: 600px) {
+        .loginContainer {
+            height: inherit;
+            width: inherit;
+            display: flex;
+            // reverse the elements
+            flex-direction: column-reverse;
+            justify-content: center;
+            // max-height: 100vh !important;
+            .intro-background{
+                margin-top: 0 !important;
+                .intro-container{
+                    margin-top: 0 !important;
+                    .intro-heading{
+                        // fit the image in the screen
+                        // nowrap the text
+                        font-size: 1.5rem !important;
+                        margin-top: 6rem !important;
+                        font-weight: 100;
+                    }
+                    .intro-subheading{
+
+                        font-size: .8rem;
+                        margin-top: 2rem !important;
+                        .star-icons{
+                            margin-top: 0;
+                            svg{
+                                width: .5rem;
+                                height: .5rem;
+                                margin: .5rem;
+                            }
+                        }
+                    }
+
+                }
+                
+                
+            }
+            .form-container{
+                height: inherit;
+                margin: 0;
+                padding: 0  0 1rem !important;
+                flex-direction: column;
+                .loginHeading{
+                    font-size: 2rem;
+                    font-weight: 700;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            .signup-container{
+                padding: 0 !important;
+                margin: 0 ;
+                .social-icons{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+            }
+            .line{
+                position: relative;
+                margin: 0;
+                // line at the middle of hr tag
+            }
+            .social-icons
+            {
+                // show only 3 elements in a row 
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                // break the line if the screen is small to 2 button in a row
+                flex-wrap: wrap;
+                width: 100%;
+                margin: 1rem 0;
+                button{
+                    width: 100%;
+                    margin: .1rem;
+                }
+                
+            }
+            .logo{
+                height: 3rem;
+            }
+        }
+
+}
+
+    // tablets
+    @media screen and (max-width: 768px) and (min-width: 600px){
+        .loginContainer{
+            display: flex;
+            flex-direction: column-reverse;
+            .intro-background{
+                .intro-heading{
+                    margin-top: 7rem !important;
+                }
+            }
+            .line{
+                margin: 1rem 1rem 0 1rem;
+                // line at the middle of hr tag
+            }
+        }
+    }
+
+    // laptops
+    @media screen and (max-width:1069px) 
+    {
+        .loginContainer{
+            display: flex;
+            height: inherit;
+            .form-container{
+                padding: 5rem 0 1rem 0;
+
+            }
+            .intro-background{
+                display: flex;
+                .intro-container{
+                    display: flex;
+                    flex-direction: column;
+                    height: inherit;
+                    .intro-heading
+                    {
+                        font-size: 2rem;
+                    }
+                }
+            }
+      
+            .signup-container{
+                padding: 7rem 0 1rem 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .social-icons{
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                }
+            }
+    }
+    }
+        
+

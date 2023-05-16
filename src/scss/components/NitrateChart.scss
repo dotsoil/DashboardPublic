@@ -1,0 +1,41 @@
+@import '../Colors.scss';
+
+.nitrate-raw-chart-card.card {
+    .card-body {
+        button {
+            border-radius: 10;
+            border-color: $secondary-color-light;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            span {
+                color: $card-color-light;
+            }
+
+            &:hover {
+                background-color: $secondary-color-light;
+                color: white;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.dashboard.dark {
+    .nitrate-raw-chart-card.card {
+        .card-body {
+            button {
+                border-color: $secondary-color-dark;
+
+                span {
+                    color: $card-color-dark;
+                }
+
+                &:hover {
+                    background-color: $secondary-color-dark;
+                }
+            }
+        }
+    }
+}

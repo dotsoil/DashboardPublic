@@ -1,0 +1,93 @@
+.WeatherCard {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    @media screen and (max-width: 1080px) {
+        flex-direction: column;
+    }
+
+    .first {
+        flex: 1;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        .weatherIcon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        svg {
+            // size big icon in card fit to window size and in card borders
+            width: 3em;
+            height: 3em;
+        }
+        img 
+        {
+            width: 8rem;
+        }
+    }
+
+    .second {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        .card-body
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            // size big icon in card fit to window size and in card borders
+            width: 3em;
+            height: 3em;
+        }
+
+        @media screen and (max-width: 1068px) {
+            .card-body {
+                flex-direction: column;
+            }
+
+        }
+
+    }
+
+    .third{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        .card-body
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        svg {
+            // size big icon in card fit to window size and in card borders
+            width: 3em;
+            height: 3em;
+        }
+
+        @media screen and (max-width: 1068px) {
+            .card-body {
+                flex-direction: column;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,86 @@
+.analyze-container.container
+{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 99% !important;
+    .row
+    {
+        display: block;
+    }
+        .form {
+            display: flex;
+            flex-direction: column;
+            padding: .5rem;
+            justify-content: space-between;
+            margin: 0;
+            button {
+                // button to center of the page
+                margin: 0 auto;
+                // margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: .5rem;
+                width: 10rem;
+            }
+    
+            select {
+                padding: .5rem;
+                max-width: 40rem;
+            }
+    
+        }
+    
+        .data {
+            display: flex;
+            // align-items: flex-start;
+            margin: 0;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            .data-nitrate {
+                margin: .5rem 0;
+                max-height: 50rem;
+                min-height: 50rem;
+                .card-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: column;
+    
+                    .ant-select-selector {
+                        width: 10rem !important;
+                    }
+                }
+
+                }
+        
+                .humidity-chart {
+                    margin: .5rem 0 6rem 0;
+                    display: flex;
+                }
+    }
+}
+@media (max-width: 880px) {
+    
+
+
+    .ant-picker-dropdown {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .ant-picker-dropdown {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+}
